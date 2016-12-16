@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TEST HTML</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./css/appsist.css">
+
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./carousel_liquid/jquery.liquidcarousel.pack.js"></script>
+    <script type="text/javascript" src="./js/handlebars-v4.0.2.js"></script>
+    <script type="text/javascript" src="./js/handlebars_helpers.js"></script>
+    <script type="text/javascript" src="./js/sockjs-0.3.4.min.js"></script>
+    <script type="text/javascript" src="./js/vertxbus-2.1.js"></script>
+    <script type="text/javascript" src="./js/sha256.js"></script>
+    <script type="text/javascript" src="./js/IID_client.js"></script>
+
+</head>
+<body>
+    <div id="page_assistenz" class="page" style="display: block;">
+        <div id="content_assistenz">
+            <div class="proc_header">
+                <div style="width: 33%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar">
+                    <span>33%</span>
+                </div>
+            </div>
+            <div class="proc_content">
+                <div class="step_desc">
+                    <p id="assistance_title" class="step">Loctite wechseln</p>
+                    <p class="todo_active ">Umstellen auf Hand-Schaltung</p>
+                </div>
+                <div class="assi_text">
+                    <div class="text_field">
+                        <p>Schalten Sie die Anlage auf manuell um. Betätigen Sie dazu die Taste "Hand" auf dem Touch-Panel.</p>
+                    </div>
+                    <div class="text_endorsement">
+                        <p>Wenn Sie den Schritt „Umstellen auf Hand-Schaltung“ ausgeführt haben, drücken Sie bitte das Feld „Bestätigen &ndash; Weiter“.</p>
+                        <div class="warnings">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="content_right">
+
+                    <video controls="" poster="/services/cds/eca22ca5-f5cd-47b4-a7f9-f0fce9f75abf/umstellung_auf_hand.jpg">
+                        <source type="video/webm; codecs=&quot;vp8.0, vorbis&quot;" src="/services/cds/eca22ca5-f5cd-47b4-a7f9-f0fce9f75abf/umstellung_auf_hand.webm"></source>
+                        <source type="video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;" src="/services/cds/eca22ca5-f5cd-47b4-a7f9-f0fce9f75abf/umstellung_auf_hand.mp4"></source>
+                        <p>Das Video kann nicht angezeigt werden.</p>
+                    </video>
+                    <button onclick="UWK.sendMessage(&quot;openFile&quot;, {&quot;openFile&quot;: true, &quot;filetype&quot;: &quot;webm&quot;, &quot;file_url&quot;: &quot;/services/cds/eca22ca5-f5cd-47b4-a7f9-f0fce9f75abf/umstellung_auf_hand.webm&quot;})" class="btn btn-appsist" type="submit">Video als Vollbild</button>
+
+                </div>
+
+            </div>
+            <div class="proc_footer">
+                <div class="third">
+                    <button type="submit" class="btn btn-appsist_quad" id="assi_close"><span class="icon icon-abort"></span></button>
+                    <button type="submit" class="btn btn-appsist_quad" id="assi_back"><span class="icon icon-arrow-back gly-flip-horizontal"></span></button>
+                </div>
+                <div style="float: left;" class="third2x">
+                    <button style="width:100%; float: left;" type="submit" class="btn btn-appsist_proc_text" id="nav_button-next">Bestätigen - Weiter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

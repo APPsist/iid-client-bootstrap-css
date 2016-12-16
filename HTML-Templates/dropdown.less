@@ -1,0 +1,113 @@
+﻿//@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+#menu {
+    width: 800px;
+    margin: 50px auto;
+    h3 {
+        font-size: 16px;
+        color: #fff;
+        padding: 10px;
+        margin: 0;
+        background: #000;
+        line-height: 20px;
+    }
+    ul {
+        position: absolute;
+        margin: 0 auto;
+        list-style: none;
+        li {
+            float: left;
+            margin: 0 0 0 20px;
+            font-size: 20px;
+            font-family: 'Bree Serif', serif;
+            line-height: 50px;
+            a {
+                color: #000;
+                text-decoration: none;
+                -webkit-transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+            }
+            a:hover {
+                color: #999;
+            }
+            img {
+                float: left;
+                width: 16px;
+                height: 16px;
+                margin: 14px 5px;
+                padding: 6px;
+                background: #999;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                border-radius: 25px;
+                -webkit-transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+            }
+        }
+        li:hover {
+            img {
+                background: #000;
+            }
+            ul {
+                top: 55px;
+            }
+        }
+        ul {
+            position: absolute;
+            top: -9999px;
+            background: #fff;
+            padding: 0;
+            margin: 0 0 0 -5px;
+            -webkit-box-shadow: 0 10px 20px #888;
+            -moz-box-shadow: 0 10px 20px #888;
+            box-shadow: 0 10px 20px #888;
+            li {
+                float: none;
+                font-size: 16px;
+                padding: 5px 10px;
+                text-align: left;
+                text-transform: uppercase;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                line-height: 20px;
+                -webkit-transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+            li.all {
+                font-size: 12px;
+                border-bottom: none;
+                text-transform: none;
+            }
+            li:hover {
+                background: #333;
+                color: #fff;
+            }
+        }
+        ul:before {
+            position: absolute;
+            content:"";
+            width: 10px;
+            height: 10px;
+            top: -5px;
+            left: 20px;
+            background: #000;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}

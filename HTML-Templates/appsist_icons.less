@@ -1,0 +1,279 @@
+﻿
+// Import the fonts
+@font-face {
+  font-family: 'ErgoSign_Symbols';
+  src: url('./fonts/ErgosignGlyphIcons2-Normal.eot');
+  src: url('./fonts/ErgosignGlyphIcons2-Normal.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/ErgosignGlyphIcons2-Normal.woff2') format('woff2'),
+       url('./fonts/ErgosignGlyphIcons2-Normal.woff') format('woff'),
+       url('./fonts/ErgosignGlyphIcons2-Normal.ttf') format('truetype'),
+       url('./fonts/ErgosignGlyphIcons2-Normal.otf') format('opentype'),
+       url('./fonts/ErgosignGlyphIcons2-Normal.svg#@{icon-font-svg-id}') format('svg');
+}
+
+@icon-size_100: 17px;
+
+.icon_header {
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  font-family: 'ErgoSign_Symbols';
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 1;
+  font-size: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  display: inline-block;
+  font-family: 'ErgoSign_Symbols';
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 1;
+  font-size:0.9*@icon-size_100 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.icon_quad {
+  display: inline-block;
+  font-family: 'ErgoSign_Symbols';
+  font-style:normal ;
+  font-weight: lighter;
+  line-height: 1;
+  font-size: 1.3*@icon-size_100 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dropdown {
+    .icon;
+     font-size: 1.5*@icon-size_100 !important;
+     position:relative;
+     top:-3px;
+     font-weight: lighter;
+     margin: 0;
+     padding: 0 0 0 8px;
+     line-height: 15px;
+     vertical-align: middle;
+}
+
+.icon-big {
+    .icon;
+     font-size: 2.2*@icon-size_100 !important;
+     top:0px;
+     font-weight: lighter;
+}
+
+.status-icon {
+    .icon-big;
+  margin-right: 5px;
+}
+
+.bg_grey {
+    background-color:@color_gray_60;
+    padding: 5px 3px 4px 5px;  
+}
+
+
+// Appsist icons
+.icon-instruction               { &:before { content: "\e60f"; } }
+.icon-knowledge                 { &:before { content: "\e678"; } }
+.icon-knowledge-bulb            { &:before { content: "\e691"; } }
+.icon-contact                   { &:before { content: "\e622"; } }
+.icon-status                    { &:before { content: "\e626"; } }
+.icon-marker                    { &:before { content: "\e66c"; } }
+.icon-bell                      { &:before { content: "\e603"; } }
+.icon-user                      { &:before { content: "\e699"; } }
+.icon-OK                        { &:before { content: "\e664"; } }
+.icon-abort                     { &:before { content: "\e628"; } }
+.icon-flash                     { &:before { content: "\e63e"; } }
+.icon-attention                 { &:before { content: "\e69e"; } }
+.icon-info                      { &:before { content: "\e64c"; } }
+.icon-log-in                    { &:before { content: "\e657"; } }
+.icon-log-out                   { &:before { content: "\e658"; } }
+.icon-up                        { &:before { content: "\e62d"; } }
+.icon-down                      { &:before { content: "\e62a"; } }
+.icon-left                      { &:before { content: "\e62b"; } }
+.icon-right                     { &:before { content: "\e62c"; } }
+.icon-image                     { &:before { content: "\e649"; } }
+.icon-movie                     { &:before { content: "\e69b"; } }
+.icon-speech-bubble             { &:before { content: "\e65c"; } }
+.icon-phone                     { &:before { content: "\e616"; } }
+.icon-play                      { &:before { content: "\e66b"; } }
+.icon-stop                      { &:before { content: "\e686"; } }
+.icon-notes                     { &:before { content: "\e663"; } }
+.icon-arrow-back                { &:before { content: "\e671"; } }
+.icon-iterations                { &:before { content: "\e672"; } }
+.icon-level_of_difficulty       { &:before { content: "\e60a"; } }
+.icon-duration                  { &:before { content: "\e677"; } }
+.icon-external                  { &:before { content: "\e665"; } }
+        
+
+.gly-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.gly-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.gly-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.gly-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.gly-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.gly-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/*! ========================================================================
+ * Bootstrap Toggle: bootstrap-toggle.css v2.2.0
+ * http://www.bootstraptoggle.com
+ * ========================================================================
+ * Copyright 2014 Min Hur, The New York Times Company
+ * Licensed under MIT
+ * ======================================================================== */
+
+
+.checkbox label .toggle,
+.checkbox-inline .toggle {
+	margin-left: -20px;
+	margin-right: 5px;
+}
+
+.toggle {
+	position: relative;
+	overflow: hidden;
+}
+.toggle input[type="checkbox"] {
+	display: none;
+}
+.toggle-group {
+	position: absolute;
+	width: 200%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	transition: left 0.35s;
+	-webkit-transition: left 0.35s;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.toggle.off .toggle-group {
+	left: -100%;
+}
+.toggle-on {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50%;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+.toggle-off {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+.toggle-handle {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height: 100%;
+	width: 0px;
+	border-width: 0 1px;
+}
+
+.toggle.btn { min-width: 59px; min-height: 34px; }
+.toggle-on.btn { padding-right: 24px; }
+.toggle-off.btn { padding-left: 24px; }
+
+.toggle.btn-lg { min-width: 79px; min-height: 45px; }
+.toggle-on.btn-lg { padding-right: 31px; }
+.toggle-off.btn-lg { padding-left: 31px; }
+.toggle-handle.btn-lg { width: 40px; }
+
+.toggle.btn-sm { min-width: 50px; min-height: 30px;}
+.toggle-on.btn-sm { padding-right: 20px; }
+.toggle-off.btn-sm { padding-left: 20px; }
+
+.toggle.btn-xs { min-width: 35px; min-height: 22px;}
+.toggle-on.btn-xs { padding-right: 12px; }
+.toggle-off.btn-xs { padding-left: 12px; }

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/of2012_main.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Compiling Bootstrap from LESS with Grunt in Visual Studio</title>
+<!-- InstanceEndEditable -->
+<link href="Compiling%20Bootstrap%20from%20LESS%20with%20Grunt%20in%20Visual%20Studio-Dateien/display.css" rel="stylesheet" type="text/css" media="screen">
+<!-- InstanceBeginEditable name="head" -->
+<script type="text/javascript" src="Compiling%20Bootstrap%20from%20LESS%20with%20Grunt%20in%20Visual%20Studio-Dateien/shCore.js"></script>
+<script type="text/javascript" src="Compiling%20Bootstrap%20from%20LESS%20with%20Grunt%20in%20Visual%20Studio-Dateien/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="Compiling%20Bootstrap%20from%20LESS%20with%20Grunt%20in%20Visual%20Studio-Dateien/shCoreDefault.css">
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div id="wrapper">
+<!--<div id="header">
+  <h1><a href="../"><img src="../pictures/TitleLogo.gif" width="120" height="106" alt="www.orderfactory.com" /></a> Welcome to the Order Factory
+  </h1>
+</div>-->
+<div id="navColumn">
+<div id="navigation">
+<ul>
+	<li><a href="https://www.orderfactory.com/" accesskey="/">Home</a></li>
+	<li><a href="https://www.orderfactory.com/Windows-2008-R2-Web-Server.html">Books</a>
+		<ul>
+		    <li><a href="https://www.orderfactory.com/Windows-2008-R2-Web-Server.html">Configuring Windows 2008 R2 Web Server</a></li>
+        </ul>
+    </li>
+	<li><a href="https://www.orderfactory.com/articles/">Articles</a>
+		<ul>
+		    <li><a href="https://www.orderfactory.com/articles/Bootstrap-LESS-Grunt-VS.html">LESS Grunt Visual Studio</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/IIS-URL-Rewrite-to-HTTPS.html">URL Rewrite to HTTPS</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/New-HDD-Testing.html">Testing New Hard Drives</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/pfSense-Snort/network-perimeter.html">pfSense and Snort Build</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/block-external-referrers.html">Referrer Spam Block</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/dbcreator/MS-SQL-DB-Create.html">SQL Rights for Web Apps</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/Embedded-Fonts/IIS-MIME-types.html">IIS Font MIME Types</a></li>
+		    <li><a href="https://www.orderfactory.com/articles/Renewing-Server-Certs/TLS-SSL-Certificate-Renewal.html">TLS/SSL Certificates</a></li>
+            <li><a href="https://www.orderfactory.com/articles/RAID-drive-replacing.html">Replacing a RAID Drive</a></li>
+        </ul>
+    </li>
+    <li><a href="https://www.orderfactory.com/press/">Press Room</a></li><li><a href="https://www.orderfactory.com/Contact.html">Contact Us</a></li><li><a href="https://www.orderfactory.com/Social-Networking.html">Social</a>
+		<ul>
+		    <li><a href="https://www.orderfactory.com/social/About-Facebook.html">Facebook</a></li>
+            <li><a href="https://www.orderfactory.com/social/About-Tweeter.html">Twitter</a></li>
+            <li><a href="https://www.orderfactory.com/social/About-Google-Plus.html">Google+</a></li>
+            <li><a href="https://www.orderfactory.com/social/About-Pinterest.html">Pinterest</a></li>
+        </ul>
+    </li>
+    <li><a href="https://www.orderfactory.com/where-to-buy.html">Where to Buy</a></li>
+</ul>
+</div>
+</div>
+<div id="mainContent"> 
+<!-- InstanceBeginEditable name="CoverHREF" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="MainEditRegion" -->
+<h1 class="clearFloats">Compiling Bootstrap from LESS with Grunt in Visual Studio</h1>
+<h2>By Sergey Nosov</h2>
+<h3>March 14, 2015</h3>
+<h2>What is LESS and why it is useful</h2>
+<p>Since 1996, <em>Cascading  Style Sheets (CSS)</em> has been the web’s
+ premier instrument for describing how  documents should look, 
+separately from what documents contain. CSS language is  very lean; it 
+does not contain functions and its variable use is limited and  
+currently not well supported in all popular browsers.</p><p>
+  For making CSS more dynamic and digestible in large projects,  various CSS pre-processor languages were invented. <a href="http://lesscss.org/">LESS</a>,
+ as one of these languages,  allows writing style instructions using 
+full power of CSS supplemented by such  programming features as 
+variables, extents, mixins, loops, and others. The  resulting dynamic 
+code is then compiled to plain CSS to be interpreted by  browsers.</p>
+<h2>Bootstrap saves time</h2>
+<p>To expedite projects, contemporary Internet and intranet  front-end 
+developers rarely start CSS designs from scratch. Instead, they build  
+on top of frameworks that already have commonly used elements, such as 
+buttons,  toolbars, and grid layouts, implemented. One of the front-end 
+frameworks is  <a href="http://getbootstrap.com/">Bootstrap</a> by 
+Twitter. Microsoft became impressed with Bootstrap so much, they  have 
+been including it in default ASP.NET web project templates since Visual 
+ Studio 2013.</p><p>
+  Bootstrap developers use LESS, which is why LESS is a  natural choice 
+for customizing and extending Bootstrap in your projects.</p><p>
+  To get started, you need to replace the CSS-only Bootstrap  package in
+ your Visual Studio ASP.NET project, with the package containing  
+Bootstrap LESS source code. Open the <em>NuGet  Package Manager Console</em> and run the following two commands:</p><p class="console">
+  Uninstall-Package bootstrap</p><p class="console">
+  Install-Package Twitter.Bootstrap.Less</p><p>
+  You can also do this from the “Tools–Extensions and  Updates…” window.
+ After the new package is installed in your project, you will  find the 
+Bootstrap LESS source code files in the project’s <em>Content/bootstrap</em> directory.</p><p>
+  While LESS files are understood by some browsers or by  browsers with 
+specially configured extensions, the mainstream way of using LESS  is by
+ compiling it into CSS, which brings us to the next section.</p>
+<h2>NPM and Grunt</h2>
+<p>There are a few different ways of compiling LESS files. The <em><a href="http://vswebessentials.com/" rel="nofollow">Web Essentials</a></em>
+ plugin for Visual Studio,  for instance, is capable of compiling LESS 
+files on-the-fly. Another way of  doing it is the way Bootstrap 
+development team does it, with Grunt task runner. </p><p>
+  Bootstrap’s in-house compilation routine is very elaborate;  it builds
+ the whole distribution package, including documentation. We will be  
+using a simplified method that you can adjust to suit your needs, or you
+ can  clone the entire Bootstrap <a href="https://github.com/twbs/bootstrap/">repository</a> from GitHub, to get the whole kitchen  sink, in case you want absolutely no deviations from the official Bootstrap  output.</p>
+<div class="advert">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6112623342206136";
+/* OF_DNS */
+google_ad_slot = "6269896608";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script> 
+      <script type="text/javascript" src="Compiling%20Bootstrap%20from%20LESS%20with%20Grunt%20in%20Visual%20Studio-Dateien/show_ads.js">
+</script>
+</div>
+<p>
+  Task runners, <a href="http://gruntjs.com/">Grunt</a> and <a href="http://gulpjs.com/">Gulp</a>,
+ are the JavaScript world loose  equivalents of MSBuild. They allow 
+scripting of consecutive tasks: building,  copying, cleaning, minifying,
+ etc. Generally, you pick Grunt or Gulp; in this  article we are using 
+Grunt; you could use Gulp as well, it is just the semantics  would be a 
+little different.</p>
+<p>But wait, Grunt and Gulp are JavaScript tools, and  JavaScript 
+usually runs in web browsers. Do we run Grunt in web browser, then? No, 
+ this is where <em>Node.js</em> comes into  view. Node.js is a 
+cross-platform environment for running JavaScript outside  web browser; 
+you can run it on the server or on your development machine. So,  as the
+ next step, if you do not have it already, <a href="https://nodejs.org/">install Node.js</a> and restart  your computer.</p><p>
+  Once Node.js environment is operational, it is time to install  
+packages with other tools that we need. Package installation is 
+simplified with  package managers. Where Visual Studio includes NuGet 
+package manager, Node.js  comes with <a href="https://www.npmjs.com/">NPM package manager</a>.
+ The default Node.js installation puts NPM tools  location into the 
+environment %PATH% variable, so that the functionality is  available 
+from any <em>Command Prompt</em> window.</p><p>
+  NPM is a hierarchical package manager, when it installs a  package, it
+ will also pull all other packages that are listed as dependencies,  and
+ dependencies of dependencies, and so on and so forth, and install them 
+into  a tree-like structure of subfolders. In contrast, flat package 
+managers, like  <a href="http://bower.io/">Bower</a>, will install only 
+the particular packages requested. As such, while NPM  and Bower 
+somewhat overlap in functionality, NPM is mostly used on the  
+development side, to save developers’ time by automatically pulling 
+everything  needed, while Bower (that we are not going to use in this 
+article) is good on  the deployment side, where a list of needed 
+packages has stabilized and it is  important to have no surprises in 
+package count and locations and no package  duplication.</p><p>
+  Launch command prompt and change (cd) to your Asp.NET  project’s home 
+directory. To figure out which folder that is you can right  click on 
+the project in the <em>Solution  Explorer</em>, and pick “Open Folder in File Explorer.” </p><p>
+  The next step, creating a <em>package.json </em>file for the project, is for Visual Studio versions  before 2015 (newer versions should already create that file for you; a<em>t the time this article was written Visual  Studio 2015 has not yet been released).</em> In the command prompt, in the  project directory, run the following command.</p>
+<p class="console">
+  npm init
+</p>  
+<p>
+  <em>NPM init</em> will ask  you a few questions about project name, description, repository location, etc.,  and make a <em>package.json </em>file
+ for the  current folder. The important fields are “name” and “version”,
+ also put  something in “description” and “author”. &nbsp;Then, edit the
+ file, delete unneeded fields,  and add the <em>"private": true</em> directive. Your resulting intermediate <em>package.json </em>file contents will look something like the following.</p>
+<div><div id="highlighter_845455" class="syntaxhighlighter nogutter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">{</code></div><div class="line number2 index1 alt1"><code class="js string">"name"</code><code class="js plain">:&nbsp; </code><code class="js string">"MyWebProject"</code><code class="js plain">,</code></div><div class="line number3 index2 alt2"><code class="js string">"version"</code><code class="js plain">: </code><code class="js string">"1.0.0"</code><code class="js plain">,</code></div><div class="line number4 index3 alt1"><code class="js string">"description"</code><code class="js plain">: </code><code class="js string">"My web project that does awesome things and looks great"</code><code class="js plain">,</code></div><div class="line number5 index4 alt2"><code class="js string">"author"</code><code class="js plain">: </code><code class="js string">"Sergey Nosov&nbsp; &lt;myemail@mydomain.com&gt;"</code><code class="js plain">,</code></div><div class="line number6 index5 alt1"><code class="js string">"private"</code><code class="js plain">: </code><code class="js keyword">true</code></div><div class="line number7 index6 alt2"><code class="js plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>The <em>"private":  true</em> directive, prevents you from accidently
+ publishing the package for the  whole world to see, and suppresses 
+warning for things, not normally needed in  private packages, missing.</p><p>
+  You could also create the <em>package.json </em>file by-hand without running <em>NPM init;</em> <em>NPM init</em> does  nothing magical, it just creates the file.</p><p>
+  Next, we install needed NPM packages. First is the <em>Grunt command line interface (CLI)</em>. It  is recommended that <a href="https://github.com/gruntjs/grunt-cli">Grunt CLI</a> is installed globally. Global packages on Windows  computers are installed in the <em>%AppData%/npm</em> folder. If you ever mess-up your global packages repository, and want to start  over, simply delete the <em>%AppData%/npm</em> folder, and run the following command to clear cache.</p><p class="console">
+  npm cache clean </p><p>
+  The next command installs Grunt CLI. The “-g” switch is what  tells NPM to install it globally.</p><p class="console">
+  npm install -g grunt-cli</p><p>
+  After this, we install three local project packages with the  
+following command. Make sure you are still in the project folder, before
+  running it.</p>
+<p class="console">
+  npm install grunt grunt-contrib-less less-plugin-autoprefix --save</p><p>
+  The “--save” switch tells NPM to update the <em>package.json </em>file and list just  installed packages as project dependencies. The packages and their dependency  trees are installed into the <em>node_modules</em> project subfolder. It is safe to delete the <em>node_modules</em>
+ folder, and re-download packages as you wish. To install the 
+packages—on this  or maybe another development computer where the 
+project was cloned—already  listed in the <em>package.json,</em> there is  no need to specify the packages again, simply run the following command form  the project folder.</p><p class="console">
+  npm install</p><p>
+  If you deleted or did not have the project <em>node_modules</em> folder before running <em>npm install</em>, NPM will download all local  dependencies listed in the <em>package.json </em>and  their sub-dependencies. Otherwise it will download whatever is missing.</p><p>
+  Your final <em>package.json </em>file contents will look something like the following.</p>
+<div><div id="highlighter_642319" class="syntaxhighlighter nogutter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">{</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"name"</code><code class="js plain">:&nbsp; </code><code class="js string">"MyWebProject"</code><code class="js plain">,</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"version"</code><code class="js plain">: </code><code class="js string">"1.0.0"</code><code class="js plain">,</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"description"</code><code class="js plain">: </code><code class="js string">"My web project that does awesome things and looks great"</code><code class="js plain">,</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"author"</code><code class="js plain">: </code><code class="js string">"Sergey Nosov &lt;myemail@mydomain.com&gt;"</code><code class="js plain">,</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"private"</code><code class="js plain">: </code><code class="js keyword">true</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"dependencies"</code><code class="js plain">: {</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"grunt"</code><code class="js plain">: </code><code class="js string">"^0.4.5"</code><code class="js plain">,</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"grunt-contrib-less"</code><code class="js plain">: </code><code class="js string">"^1.0.0"</code><code class="js plain">,</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"less-plugin-autoprefix"</code><code class="js plain">: </code><code class="js string">"^1.4.0"</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number12 index11 alt1"><code class="js plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>
+  The dependencies list includes three packages needed for our  project: <em><a href="https://github.com/gruntjs/grunt">grunt</a></em> task runner, <em><a href="https://github.com/gruntjs/grunt-contrib-less">grunt-contrib-less</a></em> LESS compiler, and <em><a href="https://github.com/less/less-plugin-autoprefix">less-plugin-autoprefix</a></em> package for  working with browser specific CSS prefixes. </p><p>
+  For the next few steps let us go back to the Visual Studio. </p><p>
+  Include the <em>package.json </em>file in the Visual Studio project, if not already included. Also this is a  good time to create and include in the project a <em>README.md</em>
+ file. In that file you can put instructions on how to get  the 
+configuration going, in case you need to move the project to another  
+computer or give it to a different developer.</p><p>
+  Under the <em>Content</em> folder find the <em>Site.css</em> file and  rename it to <em>Site.less</em>. Open the <em>Site.less</em> file and at the top of it add  the following line.</p><p class="techDetails">
+  @import "bootstrap/bootstrap.less";</p><p>
+  This import directive pulls the main <em>bootstrap.less</em> file into our S<em>ite.less</em>.  We can override and extend bootstrap anywhere in the <em>Site.less</em> (or other imported files) after the import directive. We  are not going to manually touch any of the files in the <em>Content/bootstrap</em> folder, that way you can install fresh versions  of the <em>Twitter.Bootstrap.Less</em> NuGet  package at any time and not lose your changes.</p><p>
+  We are not going to have separate Bootstrap CSS files ether,  all LESS source code is going to be compiled in together.</p><p>
+  For <em>ASP.Net MVC</em> projects, find the <em>BundleConfig.cs</em> file under the <em>App_Start</em> folder, and  remove the "~/Content/bootstrap.css" from the "~/Content/css"  style bundle (for <em>ASP.Net WebForms</em> projects, edit the <em>Bundle.config</em> XML file,  in the project root folder, and remove the <em>&lt;include  path="~/Content/bootstrap.css" /&gt; line</em>). We will compile  bootstrap together with site specific markup, as such we no longer need to  bundle the <em>bootstrap.css</em> separately.</p><p>
+  Next, right click on your project in the <em>Solution Explorer,</em> and choose  “Add–JavaScript File.” Name the file <em>Gruntfile</em> and click the OK button. Edit the newly created <em>Gruntfile.js</em> so its content is as follows. </p>
+<div><div id="highlighter_46674" class="syntaxhighlighter nogutter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">module.exports = </code><code class="js keyword">function</code> <code class="js plain">(grunt) {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">grunt.initConfig({</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">pkg: grunt.file.readJSON(</code><code class="js string">'package.json'</code><code class="js plain">),</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">less: {</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">dev: {</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">options: {</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">sourceMap: </code><code class="js keyword">true</code><code class="js plain">,</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">dumpLineNumbers: </code><code class="js string">'comments'</code><code class="js plain">,</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">relativeUrls: </code><code class="js keyword">true</code><code class="js plain">,</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">plugins: [</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">new</code> <code class="js plain">(require(</code><code class="js string">'less-plugin-autoprefix'</code><code class="js plain">))({ browsers: [</code><code class="js string">"last 2 versions"</code><code class="js plain">] })</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">]</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">files: {</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">'Content/Site.debug.css'</code><code class="js plain">: </code><code class="js string">'Content/Site.less'</code><code class="js plain">,</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">production: {</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">options: {</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">compress: </code><code class="js keyword">true</code><code class="js plain">,</code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">relativeUrls: </code><code class="js keyword">true</code><code class="js plain">,</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">plugins: [</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">new</code> <code class="js plain">(require(</code><code class="js string">'less-plugin-autoprefix'</code><code class="js plain">))({ browsers: [</code><code class="js string">"last 2 versions"</code><code class="js plain">] })</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">]</code></div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">files: {</code></div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">'Content/Site.css'</code><code class="js plain">: </code><code class="js string">'Content/Site.less'</code><code class="js plain">,</code></div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number31 index30 alt2">&nbsp;</div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">});</code></div><div class="line number33 index32 alt2">&nbsp;</div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">grunt.loadNpmTasks(</code><code class="js string">'grunt-contrib-less'</code><code class="js plain">);</code></div><div class="line number35 index34 alt2">&nbsp;</div><div class="line number36 index35 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">grunt.registerTask(</code><code class="js string">'default'</code><code class="js plain">, [</code><code class="js string">'less'</code><code class="js plain">]);</code></div><div class="line number37 index36 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">grunt.registerTask(</code><code class="js string">'production'</code><code class="js plain">, [</code><code class="js string">'less:production'</code><code class="js plain">]);</code></div><div class="line number38 index37 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">grunt.registerTask(</code><code class="js string">'dev'</code><code class="js plain">, [</code><code class="js string">'less:dev'</code><code class="js plain">]);</code></div><div class="line number39 index38 alt2"><code class="js plain">};</code></div></div></td></tr></tbody></table></div></div>
+<p>Go back to the project directory <em>command prompt</em> window. And run the following command.</p><p class="console">
+  call Grunt</p><p>
+  This will execute the tasks we just created, and if  everything goes well you will end up with new <em>Site.css</em> and <em>Site.debug.css</em>
+ files (which you want to include in the Visual Studio project). These 
+are the  results of the LESS compilation. The file with “debug” in the 
+name is more  verbose, the one without is more compact for production 
+use.</p>
+<h2>Write your own LESS</h2>
+<p>Do you remember when we renamed the <em>Site.css</em> to <em>Site.less</em>?
+ We  could do that because LESS is a superset of CSS. Everything that is
+ valid in  CSS is valid in LESS. But LESS is also so much more; let us 
+dive in.</p><p>
+  Open the <em>Site.less</em> file in Visual Studio. See that the <em>body</em> tag is decorated with <em>padding-top: 50px</em>
+ attribute? That is done because the Bootstrap top navigation bar 
+overhangs the  rest of the content, and in current versions this 
+overhang happens to be 50  pixels. What if overhang changes and you 
+still have the 50 pixels hard-coded in  your CSS? Your layout will be 
+out of alignment.</p><p>
+  Simply replace the 50px with <em>@navbar-height</em> variable that Bootstrap defines, and you now can be  sure that you always compensate for the right overhang.</p><p>
+  Let us go a step further, and change something more visual  in our design. Add the following line at the bottom of the <em>Site.less</em> file, to override the Bootstrap variable that controls  the body background color.</p><p class="techDetails">
+  @body-bg:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  #f89422;</p><p>
+  You resulting <em>Site.less</em> file will look something like the following (other lines removed for brevity).</p>
+<div><div id="highlighter_468571" class="syntaxhighlighter nogutter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js comments">//** Pull Bootstrap in</code></div><div class="line number2 index1 alt1"><code class="js plain">@import </code><code class="js string">"bootstrap/bootstrap.less"</code><code class="js plain">;</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="js comments">//**Removal of Bootstrap top navbar overhang</code></div><div class="line number5 index4 alt2"><code class="js plain">body { padding-top: @navbar-height; }</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="js comments">//** Background color for `&lt;body&gt;`.</code></div><div class="line number8 index7 alt1"><code class="js plain">@body-bg:</code>&nbsp;&nbsp; <code class="js preprocessor">#f89422;</code></div></div></td></tr></tbody></table></div></div>
+<p>Compile LESS again, with <em>call  Grunt</em>, and run the site to see the changes, you now should have a nice  orangey-yellow background.</p>
+<h2>Automating LESS compilation</h2>
+<p>We now have the infrastructure for compiling LESS sources  into CSS 
+fully functional, but so far we had to manually call Grunt every time  
+we changed some LESS code.</p><p>
+  One way to make it run automatically is by placing the call  to Grunt into the project’s <em>Pre-build</em> event.</p><p>
+  Right click on your project in the <em>Solution Explorer</em>, and 
+choose “Properties.” Activate the “Build  Events” tab, and in the 
+“Pre-build event command line” box add the following  two lines.</p><p class="techDetails">
+  cd $(ProjectDir)</p><p class="techDetails">
+  call grunt --no-color</p>
+<p>Now, every time you build the project, your LESS source code  is compiled as well.</p><p>
+  Visual Studio <em><a href="https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708">Task  Runner Explorer</a></em> plugin is available for more sophisticated interaction with  various <em>Grunt</em> or <em>Gulp</em> tasks.</p><p>
+  It is your choice whether to use various Visual Studio  plugins; no 
+question, they can make you much more productive at your job.  However, 
+we think that by following our manual steps, you now better understand  
+how these plugins work under-the-hood; and also if you have to use 
+Visual  Studio environments where you have no control over which plugins
+ are installed  you now know what to do.</p><p>
+  In conclusion, we hope that those who have not used LESS before  
+learned how to harness its power for ASP.Net projects, and that you now 
+have a  better idea how different pieces of JavaScript development 
+environment come  together.</p>
+<p>&nbsp;</p>
+<script type="text/javascript">
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.all()
+</script>
+<!-- InstanceEndEditable --></div>
+<div id="legInfo">
+<p>Copyright © 2012-2015 www.orderfactory.com. All rights reserved.<br>
+  <em>"Configuring Windows 2008 R2 Web Server" is an independently 
+published book and is not affiliated with, nor has it been authorized, 
+sponsored, or otherwise approved by Microsoft Corporation. Windows is a 
+registered trademark of Microsoft Corporation in the United States and 
+other countries.</em></p>
+<p><a href="https://www.orderfactory.com/Privacy.html">Privacy Policy</a></p>
+</div>
+</div>
+
+
+</body><!-- InstanceEnd --></html>

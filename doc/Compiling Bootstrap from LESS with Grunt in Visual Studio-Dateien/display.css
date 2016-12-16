@@ -1,0 +1,421 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Zeroing margins and padding on all elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size:	100%;
+}
+body {
+	font-family: Constantia, "Palatino Linotype", Palatino, Garamond, Georgia, serif;
+	font-size: 62.5%;
+	line-height: 1.5;
+	padding: 20px;
+	background-color: #44459C;
+	color: #FFFFFF;
+}
+a:link, a:visited {
+	color: #DDD2CF;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #F5F1F0;
+}
+#wrapper {
+	max-width: 800px;
+	min-width: 740px;
+	margin: 0 auto;
+}
+
+
+#mainContent {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	width: 500px;
+	float: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Candara, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-variant: small-caps;
+	margin-bottom: 1.1em;
+}
+h1 {
+	font-size: 3.0em;
+	border-bottom: 1px dotted #cccccc;
+	/*color: #DAD8ED;*/
+}
+h2 {
+	font-size: 2.1em;
+	border-bottom: 1px dotted #cccccc;
+	/*color: #DAD8ED;*/
+}
+
+p {
+	font-size: 2.0em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+.moreEmph {
+	margin-left: 2em;
+	font-size: 2.2em;
+}
+
+
+blockquote p{
+	margin-left: 4em;
+}
+
+ul, ol {
+	font-size: 2.0em;
+	margin-bottom: 1em;
+	margin-left: 3.5em;
+}
+
+li {
+	margin-bottom: 0.4em;
+}
+
+pre {
+	font-size: 1.5em;
+	margin-bottom: 1.4em;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+
+#legInfo {
+	font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "Courier New", Courier, monospace;
+	font-size: 0.6em;
+	font-weight: bold;
+	clear: both;
+	text-align: center;
+}
+.vcard {
+	text-align: left;
+	padding-top: 20px;
+	font-weight: bold;
+	font-variant: small-caps;
+	padding-bottom: 18px;
+	padding-left: 12px;
+	font-size: 2.0em;
+}
+#navColumn {
+	float: left;
+	margin-top: 18px;
+	margin-right: 18px;
+}
+#navigation ul {
+	list-style-type: none;
+	width: 200px;
+	font-family: Candara, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 1.8em;
+	line-height: 1;
+	margin: 0;
+}
+
+#navigation li{
+	margin: 0;
+}
+
+#navigation li+li {
+	border-top: 1px solid #C6B99B;
+}
+#navigation ul ul {
+	font-size: 0.7em;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-color: #D6CDB8;
+	padding-bottom: 2px;
+	background-color: #C6B99B;
+}
+/* fix for extra white space of IE 6.0*/
+#navigation a:link, #navigation a:visited {
+	display: inline-block;
+}
+#navigation a:link, #navigation a:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	color: #FFFFFF;
+	background-color: #A8966B;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+}
+#navigation a:hover {
+	background-color: #C6B99B;
+}
+#navigation li li a:link, #navigation li li a:visited {
+	background-color: #C6B99B;
+	padding-left: 12px;
+	border-bottom: none;
+}
+#navigation li li a:hover {
+	background-color: #D6CDB8;
+}
+#header {
+	background-color: #FFFFFF;
+	width: auto;
+	height: auto;
+	min-width: 410px;
+	background-image: url(pictures/Logo_bg_gr.jpg);
+	background-repeat: repeat-y;
+}
+
+#header h1 {
+	color: #000;
+	font-size: 2.0em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	border-bottom: none;
+}
+
+#header img {
+	padding: 10px;
+	display:inline-block;
+	vertical-align: -40%;
+}
+
+#header img { 
+	border: none;
+}
+
+.clearFloats {
+	clear: both;
+}
+
+.imageButton {
+	margin-top: 360px;
+}
+
+.imageButton a img {
+	border: none;
+}
+
+.imageButton fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.imageLink {
+	float:left;
+	padding: 5px;
+	margin-bottom: 1em;
+	margin-right: 20px;
+	background-color: #DAD8ED;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-right-color: #716DB2;
+	border-bottom-color: #716DB2;
+	font-family: Candara, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1;
+}
+.imageLink a:link, .imageLink a:visited {
+	/*color: #44459C;*/
+	text-decoration: none;
+}
+.imageLink a:hover {
+	text-decoration: none;
+	color: #4F1C1F;
+}
+.imageLink a img {
+	border: 1px solid #BBB8DC;
+}
+
+
+.advert:before {
+    content: "Advertisement:";
+    display: block;
+    clear: both;
+	border-bottom-style: dotted;
+	border-bottom-width: medium;
+	margin-bottom: 1em;
+	
+}
+
+.advert {
+	border-bottom-style: dotted;
+	border-bottom-width: medium;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	/*margin-left: 2em;*/
+}
+
+#mainContent table
+{
+border-spacing: 1em;
+margin-bottom: 1em;
+}
+
+#mainContent th
+{
+text-align: left;
+padding-left: 1em;
+} 
+
+#mainContent th,td
+{
+padding-left: 1em;
+}
+
+.iperfTable table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:80%;
+	margin-left: 1.8em;
+}
+.iperfTable tr:hover td{
+	
+}
+.iperfTable tr:nth-child(odd){ background-color:#ffaa56; }
+.iperfTable tr:nth-child(even)    { background-color:#ddd2cf; }.iperfTable td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding: 2px 7px;
+	font-size:1.3em;
+	color:#000000;
+}.iperfTable tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.iperfTable tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.iperfTable tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.iperfTable tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:1.5em;
+	font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;;
+	font-weight:bold;
+	color:#ffffff;
+}
+.iperfTable tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+}
+.iperfTable tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.iperfTable tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.techDetails {
+	font-size: 1.3em;
+}
+
+div.CodeCxSpFirst {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+div.CodeCxSpLast {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+div.CodeCxSpMiddle {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+li.CodeCxSpFirst {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+li.CodeCxSpLast {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+li.CodeCxSpMiddle {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+p.CodeCxSpFirst {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+p.CodeCxSpLast {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+p.CodeCxSpMiddle {	font-size:1.5em;
+	font-family:"Myriad Pro Cond", "sans-serif";
+}
+
+.console {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 1.2em;
+	color: #CCCCCC;
+	background: #000000;
+	border: 1px solid #CCCCCC;
+	padding: 0.5em;
+}
+
+/* Design for small screens.
+   CSS3 feature, may not validate in CSS2 */
+@media screen and (max-device-width: 799px) {
+
+#wrapper {
+	min-width: 0;
+}
+
+#navColumn {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+#mainContent {
+	margin-top: 0;
+	width: auto;
+    max-width: 500px;
+}
+
+#mainContent img {
+	max-width: 320px;
+	height: auto;
+}
+
+#mainContent p img {
+	margin-left: -1em;
+	padding-left: -20px;
+}
+
+.imageLink img {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#navigation ul, ol {
+	width: auto;
+	max-width: 464px;
+	width: 200px;
+}
+
+.imageButton {
+	margin-top: 0;
+}
+
+.advert {
+	margin-left: -20px;
+}
+
+}
